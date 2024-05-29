@@ -1,12 +1,8 @@
 import os
 
 import streamlit as st
-from dotenv import load_dotenv
 import google.generativeai as gen_ai
 
-
-# Load environment variables
-load_dotenv()
 
 # Configure Streamlit page settings
 st.set_page_config(
@@ -44,7 +40,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask Gemini-Pro...")
+user_prompt = st.chat_input("Pregunta al Asistente 2...")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        src: "./"
+    env_file:
+      - .env
+    image: chatbot-app:latest
+    #restart: unless-stopped
+    volumes:
+      - './.env:/app/src/.env'
+    environment:
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: null
+    command: [ "streamlit", "run", "app.py" ]
+    ports:
+      - ${__APP_EXPOSED_PORT:-8000}:${__APP_INTERNAL_PORT:-8501}

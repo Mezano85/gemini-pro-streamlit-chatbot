@@ -1,0 +1,14 @@
+[[pages]]
+path = "app.py"
+name = "Descripción del proyecto"
+icon = ":eight_spoked_asterisk:"
+
+[[pages]]
+path = "pages/assistant_1.py"
+name = "Asistente Gemini - Tunning 1"
+icon = ":eight_spoked_asterisk:"
+
+[[pages]]
+path = "pages/assistant_2.py"
+name = "Asistente Gemini - Tunning 2"
+icon = ":eight_spoked_asterisk:"
